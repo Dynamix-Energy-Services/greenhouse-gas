@@ -3,6 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.14
+        environment:
+          CODECOV_TOKEN: cef59627-f586-479c-9c8b-0739f7a9eb7a
 
     working_directory: ~/repo
 
@@ -25,3 +27,8 @@ jobs:
 
       # run tests!
       - run: npm run test
+
+      - run:
+          name: Codecov Report
+          command: bash <(curl -s https://codecov.io/bash)
+          when: on_success
