@@ -1,5 +1,6 @@
-# greenhouse-gas
+# ![Greenhouse Gas](logo.jpg) greenhouse-gas
 A Greenhouse Gas Equivalency Calculator
+[![CircleCI](https://circleci.com/gh/Dynamix-Energy-Services/greenhouse-gas/tree/master.svg?style=svg)](https://circleci.com/gh/Dynamix-Energy-Services/greenhouse-gas/tree/master) [![codecov](https://codecov.io/gh/Dynamix-Energy-Services/greenhouse-gas/branch/master/graph/badge.svg)](https://codecov.io/gh/Dynamix-Energy-Services/greenhouse-gas)
 
 This package is intended to provide an equivalency model for energy calculations. It's common to try to compare energy savings or reduction in analogous quantities. This library provides the conversion specification for doing so. All of these calculations are using those referenced by the US EPA [here](https://www.epa.gov/energy/greenhouse-gases-equivalencies-calculator-calculations-and-references). These include the following:
 - gallons of gasoline consumed
