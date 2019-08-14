@@ -54,5 +54,21 @@ describe('GreenhouseGas', () => {
         expect(res.value.toFixed(3)).toEqual(expected_values[idx]);
       });
     });
+
+    it('should perform calculations for a given keyList', () => {
+      const fake_kwh = 200;
+      const fake_opts = {
+        keyList: ['gasoline']
+      }
+      const result = GreenhouseGas.calculateEquivalency(fake_kwh, fake_opts)
+
+      expect(result.length).toBe(1)
+      expect(result[0]).toStrictEqual({
+        name: 'gasoline',
+        units: 'gallon of gasoline',
+        value: 15.910881062225721,
+        description: 'gallons of gasoline consumed'
+      })
+    })
   });
 });
